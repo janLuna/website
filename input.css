@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+	@apply font-[Dosis,monospace] p-2 bg-gradient-to-bl from-slate-700 to-slate-800 rounded-lg w-fit max-w-[26.5rem] h-fit max-h-56 my-auto mx-auto shadow-slate-900 drop-shadow-lg inline-block;
+}
+
+.card header {
+	@apply text-white font-light text-[20px];
+}
+
+.card p {
+	@apply font-light text-[19px];
+	line-height: 110%;
+}
