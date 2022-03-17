@@ -1,0 +1,46 @@
+<span id="text">press a button...</span>
+<style>
+html {
+  height: 100%;
+}
+
+body {
+  background: #111;
+  color: #eee;
+  font-family: sans;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+#keyname {
+  color: #8de368;
+}
+
+#keycode {
+  color: #aba6e0;
+}
+
+#down {
+  color: lime;
+}
+
+#up {
+  color: red;
+}
+</style>
+
+<script>
+const text = document.getElementById("text")
+
+document.addEventListener("keydown",event => {
+  text.innerHTML = `key <span id="keyname">"${event?.key}"</span> with keycode <span id="keycode">${event.keyCode}</span> <span id="down">down</span>`
+})
+
+document.addEventListener("keyup",event=>{
+  text.innerHTML = `key <span id="keyname">"${event?.key}"</span> with keycode <span id="keycode">${event.keyCode}</span> <span id="up">up</span>`
+})
+</script>
